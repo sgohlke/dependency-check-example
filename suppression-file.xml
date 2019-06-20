@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.2.xsd">
+    <suppress>
+        <notes><![CDATA[
+        file name: hazelcast-3.8.5.jar  *** To be excluded ***
+        ]]></notes>
+        <gav regex="true">^com\.hazelcast:hazelcast:.*$</gav>
+        <cve>CVE-2016-10750</cve>
+    </suppress>
+</suppressions>
