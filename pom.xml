@@ -18,7 +18,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>5.1.8.RELEASE</version>
+            <version>5.2.2.RELEASE</version>
         </dependency>
 
         <!--Example of dependency with security vulnerability that excludes affected artifact and uses up-to-date version-->
@@ -27,6 +27,10 @@
             <artifactId>opensaml-saml-api</artifactId>
             <version>3.3.0</version>
             <exclusions>
+                <exclusion>
+                    <groupId>org.apache.santuario</groupId>
+                    <artifactId>xmlsec</artifactId>
+                </exclusion>
                 <exclusion>
                     <groupId>org.bouncycastle</groupId>
                     <artifactId>bcprov-jdk15on</artifactId>
@@ -38,14 +42,19 @@
             </exclusions>
         </dependency>
         <dependency>
+            <groupId>org.apache.santuario</groupId>
+            <artifactId>xmlsec</artifactId>
+            <version>2.1.4</version>
+        </dependency>
+        <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.61</version>
+            <version>1.64</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>28.0-jre</version>
+            <version>28.1-jre</version>
         </dependency>
 
         <!--Example of dependency with security vulnerability but suppressed by suppression file-->
@@ -86,7 +95,7 @@
                     <!--Used to perform a dependency security scan-->
                     <groupId>org.owasp</groupId>
                     <artifactId>dependency-check-maven</artifactId>
-                    <version>5.0.0</version>
+                    <version>5.2.4</version>
                     <configuration>
                         <failBuildOnCVSS>5</failBuildOnCVSS>
                         <suppressionFiles>
