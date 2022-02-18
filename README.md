@@ -1,4 +1,7 @@
 # dependency-check-example
+> **Note**: This is a playground project project and may not use up-to-date depenencies!
+
+
 Example on using dependency-check
 
 ## Dependency Check
